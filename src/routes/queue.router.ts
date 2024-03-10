@@ -1,8 +1,11 @@
 import { Router } from "express";
-import { getMessageFromQueue, addMessageToQueue } from "../controllers/queueController";
+import {
+  enqueueMessageToRedisQueue,
+  dequeueMessageFromRedisQueue,
+} from "../controllers/queueController";
 const router = Router();
 
-router.get("/api/:queueName", getMessageFromQueue);
-router.post("/api/:queueName", addMessageToQueue);
+router.get("/api/:queueName", enqueueMessageToRedisQueue);
+router.post("/api/:queueName", dequeueMessageFromRedisQueue);
 
 export default router;
