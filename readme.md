@@ -1,4 +1,4 @@
-# Tabnine honme assignment
+# Tabnine home assignment
 
 step 2 in interview
 
@@ -23,6 +23,16 @@ After installing dependencies, you can start the server by running the following
 ```
 npm run build
 npm start
+```
+
+### Setting Up Redis
+
+Ensure you have Redis installed and running. This project assumes Redis is accessible on `localhost` on the default port (`6379`). For custom setups, adjust the Redis connection parameters in your project accordingly.
+
+#### Running Redis with Docker
+
+```bash
+docker run --name redis -p 6379:6379 -d redis
 ```
 
 ## Environment Variables
